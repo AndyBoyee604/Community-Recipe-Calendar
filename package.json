@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/AndyBoyee604/Community-Recipe-Calendar/issues"
   },
-  "homepage": "https://github.com/AndyBoyee604/Community-Recipe-Calendar#readme"
+  "homepage": "https://github.com/AndyBoyee604/Community-Recipe-Calendar#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1"
+  }
 }

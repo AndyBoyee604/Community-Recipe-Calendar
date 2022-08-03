@@ -1,1 +1,1 @@
-# Community_Calendar
+# Community-Recipe-Calendar

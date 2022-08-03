@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS hbd2vka07dx85pkb;
+
+CREATE DATABASE hbd2vka07dx85pkb;

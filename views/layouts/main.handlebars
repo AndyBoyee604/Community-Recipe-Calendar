@@ -7,21 +7,42 @@
     <link rel="stylesheet" href="/public/css/style.css" />
   </head>
 
+  {{! -- Page body start }}
   <body>
     <div class="wrapper">
+      {{! --header start }}
       <header>
         <h1>
           <a href="/">Recipe-Me</a>
         </h1>
+        {{! navigation start }}
+        <nav>
+          {{! logout and login buttons on page w/ dashboard button, can rename if wanted}}
+          {{#if loggedIn}}
+            <a href="/dashboard">dashboard</a>
+            <button id="logout" class="btn-no-style">logout</button>
+          {{else}}
+            <a href="/login">login</a>
+          {{/if}}
+        </nav>
+        {{! navigation end}}
       </header>
+      {{! --header end }}
       <main>
         {{{body}}}
       </main>
-      <footer>
-        Let's Eat!
+
+      {{! --page footer }}
+      <footer class="footer">
+        <p>&copy; 2022 Recipe Me</p>
       </footer>
     </div>
 
-  </body>
+    {{! The below is for a logout function located under public-javascript-logoutjs}}
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
 
+  </body>
+  {{! -- Page body end }}
 </html>

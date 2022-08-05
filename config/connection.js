@@ -5,11 +5,12 @@ const Sequelize = require("sequelize");
 const sequelize = process.env.JAWSDB_URL
   ? new Sequelize(process.env.JAWSDB_URL)
   : new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
-      host: "t07cxyau6qg7o5nz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-      dialect: "mysql",
-      dialectOptions: {
-        decimalNumbers: true,
-      },
-    });
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    dialect: "mysql",
+    dialectOptions: {
+      decimalNumbers: true,
+    },
+  });
 
 module.exports = sequelize;

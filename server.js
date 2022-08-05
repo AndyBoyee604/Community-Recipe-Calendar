@@ -1,10 +1,10 @@
 const express = require("express");
-const routes = require("./routes");
+const routes = require("./controllers");
 // import sequelize connection
 const sequelize = require("./config/connection");
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 //handlebars template engine
 const exphbs = require("express-handlebars");

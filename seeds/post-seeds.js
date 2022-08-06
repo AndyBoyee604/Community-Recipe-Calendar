@@ -2,13 +2,13 @@ const { Post } = require('../models');
 
 const postdata = [
   {
-    title: 'Donec posuere metus vitae ipsum.',
-    post_url: 'https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png',
+    title: 'French Apple Cake',
+    post_url: 'https://www.onceuponachef.com/recipes/french-apple-cake.html',
     user_id: 10
   },
   {
-    title: 'Morbi non quam nec dui luctus rutrum.',
-    post_url: 'https://nasa.gov/donec.json',
+    title: 'Classic Pot Pie',
+    post_url: 'https://www.pillsbury.com/recipes/classic-chicken-pot-pie/1401d418-ac0b-4b50-ad09-c6f1243fb992',
     user_id: 8
   },
   {

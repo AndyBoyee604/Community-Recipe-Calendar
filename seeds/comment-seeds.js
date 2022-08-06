@@ -221,18 +221,18 @@ const commentdata = [
     post_id: 11
   },
   {
-    comment_text: 'Vestibulum ac est lacinia nisi venenatis tristique.',
+    comment_text: 'Testing 1',
     user_id: 4,
     post_id: 6
   },
   {
-    comment_text: 'Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.',
+    comment_text: 'Great recipe',
     user_id: 9,
     post_id: 6
   },
   {
     comment_text:
-      'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam.',
+      'Maybe try this...',
     user_id: 7,
     post_id: 9
   },

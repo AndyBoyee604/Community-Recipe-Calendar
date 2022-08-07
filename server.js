@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 3000;
 const exphbs = require("express-handlebars");
 const hbs = exphbs.create({});
 
+app.use('/public', express.static('public'))
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

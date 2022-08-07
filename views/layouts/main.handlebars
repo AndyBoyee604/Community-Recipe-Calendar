@@ -42,15 +42,23 @@
          <h1 class="subtitle is-size-6-fullhd has-text-grey has-text-centered">
         </div>
    </section>
-
+<br>
         {{! Add Recipe Section Start}}
-        <section class="has-background-warning">
+      <section class="has-text-centered">
+        <h1 class="button is-white has-text-warning">
+          <a href="/">Add Recipe</a>
+        </h1>
+      </section>
+      <br>
+        <section class="has-background-warning has-text-centered">
           {{! logout and login buttons on page}}
           {{#if loggedIn}}
             <a href="/dashboard">dashboard</a>
             <button id="logout" class="btn-no-style">logout</button>
           {{else}}
-            <a href="/login">login</a>
+          <h1 class="button is-white has-text-warning">
+            <a href="/login">Sign Up/Login</a>
+          </h1>
           {{/if}}
         </section>
     <br>

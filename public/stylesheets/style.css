@@ -18,3 +18,7 @@ footer {
   flex-wrap: wrap;
   width: 100%;
 }
+
+.align-center {
+  align-items: center;
+}

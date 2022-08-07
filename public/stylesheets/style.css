@@ -22,3 +22,7 @@ footer {
 .align-center {
   align-items: center;
 }
+
+#link {
+  align-items: flex-start;
+}

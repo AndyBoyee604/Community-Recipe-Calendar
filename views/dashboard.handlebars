@@ -1,18 +1,22 @@
+<br>
 <section>
-  <h2>Create New Recipe</h2>
-
+  <h2 class="has-text-weight-medium is-size-6 has-text-black is-italic">Complete the Form Below to Add a New Recipe</h2>
+<br>
   <form class="new-post-form">
     <div>
       <label for="post-title">Title</label>
       <input type="text" id="post-title" name="post-title" />
     </div>
+    <br>
     <div>
       <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
+      <input id="post-url" name="post-url"/>
     </div>
-    <button type="submit" class="btn">Create</button>
+    <br>
+    <button type="submit" class="btn button has-background-primary has-text-white">Create</button>
   </form>
 </section>
+<br>
 
 {{#if posts.length}}
 <section>
@@ -27,5 +31,7 @@
   </ol>
 </section>
 {{/if}}
+
+
 
 <script src="/javascript/add-post.js"></script>

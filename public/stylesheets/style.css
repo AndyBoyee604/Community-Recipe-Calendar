@@ -8,18 +8,13 @@ header {
 }
 
 body {
-  background-color: white;
+  background-color: #ffe08a;
 }
 
 footer {
-  background: white;
+  background: #ffe08a;
   padding: 40px 35px;
-  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-}
-
-section {
-  padding: 60px;
 }

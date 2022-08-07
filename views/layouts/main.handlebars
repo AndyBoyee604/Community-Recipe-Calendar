@@ -1,5 +1,5 @@
 <html lang="en">
-
+{{! page head start}}
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,19 +10,14 @@
     />
     <link rel="stylesheet" href="/public/stylesheets/style.css" />
   </head>
+{{! page head end}}
 
+{{! page body start}}
   <body>
-  <!--header start-->
+  {{! page header start}}
       <header>
         <!--<img src="/public/images/Header Image.png"-->
-  <!--nav menu button-->
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
           </div>
-   <!--nav home button-->     
           <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end">
               <a class="navbar-item">
@@ -30,14 +25,13 @@
                 <div class="navbar-end">
                   <button class="button is-white">Logout<href="./../"> <!--Need to add logout functionality-->
                   </a>
-                  <a>
-                  </a>
-                  </div>
-        </nav>
+                <a>
+               </a>
+             </div>
         </header>
-   <!--header and navigaton ends-->
+   {{! page header ends}}
 
-<!--page title text w/ white background-->
+  {{! page logo images}}
    <section class="has-background-warning has-text-centered">
       <p class="has-text-centered">
         <div id="logo" class="align-text-center">
@@ -48,9 +42,10 @@
          <h1 class="subtitle is-size-6-fullhd has-text-grey has-text-centered">
         </div>
    </section>
+
         {{! Add Recipe Section Start}}
         <section class="has-background-warning">
-          {{! logout and login buttons on page w/ dashboard button, can rename if wanted}}
+          {{! logout and login buttons on page}}
           {{#if loggedIn}}
             <a href="/dashboard">dashboard</a>
             <button id="logout" class="btn-no-style">logout</button>
@@ -58,15 +53,14 @@
             <a href="/login">login</a>
           {{/if}}
         </section>
-      </header>
-      {{! --header end }}
-      <main>
+    <br>
+      <main class="has-background-white has-text-centered-fullhd">
         {{{body}}}
       </main>
 
       {{! --page footer }}
-      <footer class="footer">
-        <p>&copy; 2022 Community Recipe Me</p>
+      <footer class="footer has-background-warning has-text-centered-fullhd">
+        <p class="has-text-centered-fullhd">&copy; 2022 Community Recipe Me</p>
       </footer>
     </div>
 

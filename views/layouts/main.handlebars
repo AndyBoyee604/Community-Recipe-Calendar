@@ -3,20 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipe-Me</title>
+    <title>Community-Recipe-Me</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
     <link rel="stylesheet" href="/public/stylesheets/style.css" />
   </head>
 
-  {{! -- Page body start }}
   <body>
-    <div class="wrapper">
-      {{! --header start }}
+  <!--header start-->
       <header>
-        <h1>
-          <a href="/">Recipe-Me</a>
-        </h1>
-        {{! navigation start }}
-        <nav>
+  <!--navigation bar start-->
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+  <!--nav menu button-->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+   <!--nav home button-->     
+          <div id="navbarBasicExample" class="navbar-menu has-background-warning">
+            <div class="navbar-end">
+              <a class="navbar-item has-text-white has-background-warning">
+              </a>
+
+              <div id="navbarBasicExample" class="navbar-menu-fullhd">
+                <div class="navbar-end">
+                  <a class="navbar-item has-text-dark has-background-warning" href="./../"> <!--Need to add logout functionality-->
+                    Logout
+                  </a>
+                  <a>
+                  </a>
+                  </div>
+        </nav>
+        </header>
+   <!--header and navigaton ends-->
+
+<!--page title text w/ white background-->
+   <section class="has-background-warning">
+    <p class="has-text-centered">
+      <img src="/public/images/logo-7.png">
+    </p>
+    <p class="has-text-centered">
+      <img src="/public/images/page-name-text.png">
+    </p>
+     <p class="subtitle is-size-6-fullhd has-text-grey has-text-centered">
+        <em> Share, Comment, and Save Recipes!</em>
+  </section>
+        {{! Add Recipe Section Start}}
+        <section class="has-background-warning">
           {{! logout and login buttons on page w/ dashboard button, can rename if wanted}}
           {{#if loggedIn}}
             <a href="/dashboard">dashboard</a>
@@ -24,8 +62,7 @@
           {{else}}
             <a href="/login">login</a>
           {{/if}}
-        </nav>
-        {{! navigation end}}
+        </section>
       </header>
       {{! --header end }}
       <main>
@@ -34,7 +71,7 @@
 
       {{! --page footer }}
       <footer class="footer">
-        <p>&copy; 2022 Recipe Me</p>
+        <p>&copy; 2022 Community Recipe Me</p>
       </footer>
     </div>
 

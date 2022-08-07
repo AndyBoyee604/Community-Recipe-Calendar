@@ -25,15 +25,14 @@
             </a>
           </div>
    <!--nav home button-->     
-          <div id="navbarBasicExample" class="navbar-menu has-background-warning">
+          <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item has-text-white has-background-warning">
+              <a class="navbar-item has-text-white">
               </a>
 
               <div id="navbarBasicExample" class="navbar-menu-fullhd">
                 <div class="navbar-end">
-                  <a class="navbar-item has-text-dark has-background-warning" href="./../"> <!--Need to add logout functionality-->
-                    Logout
+                  <button class="button is-warning">Logout<href="./../"> <!--Need to add logout functionality-->
                   </a>
                   <a>
                   </a>
@@ -47,9 +46,8 @@
       <p class="has-text-centered">
       <img src="/public/images/page-name-text.png">
          <h1 class="subtitle is-size-6-fullhd has-text-grey has-text-centered">
-        <em> Share, Comment, and Save Recipes!</em></h1>
-   
-  </section>
+        <em> Share and Save Recipes!</em></h1>
+   </section>
         {{! Add Recipe Section Start}}
         <section class="has-background-warning">
           {{! logout and login buttons on page w/ dashboard button, can rename if wanted}}
@@ -76,7 +74,6 @@
     {{#if loggedIn}}
       <script src="/javascript/logout.js"></script>
     {{/if}}
-
   </body>
   {{! -- Page body end }}
 </html>

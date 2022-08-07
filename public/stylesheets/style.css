@@ -1,1 +1,22 @@
 /*Testing this commit*/
+header {
+  padding: 20px 35px;
+  background-color: white;
+}
+
+body {
+  background-color: white;
+}
+
+footer {
+  background: white;
+  padding: 40px 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+section {
+  padding: 60px;
+}

@@ -1,29 +1,25 @@
-const express = require("express");
-const routes = require("./controllers");
-// import sequelize connection
-const sequelize = require("./config/connection");
+const express = require('express');
+const routes = require('./controllers/');
+const sequelize = require('./config/connection');
+
+const exphbs = require('express-handlebars');
+const hbs = exphbs.create({});
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-//handlebars template engine
-const exphbs = require("express-handlebars");
-const hbs = exphbs.create({});
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 app.use('/public', express.static('public'))
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// turn on routes
 app.use(routes);
 
-//handlebars template engine
-app.engine("handlebars", hbs.engine);
-app.set("view engine", "handlebars");
-
-// sync sequelize models to the database, then turn on the server
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
+// turn on connection to db and server
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
 });
-
-//console.log("Hello World!");

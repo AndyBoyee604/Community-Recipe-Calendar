@@ -6,10 +6,12 @@ const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
 
 const app = express();
-const PORT = process.env.PORT || 3306;
+const PORT = process.env.PORT || 3000;
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+
+app.use('/public', express.static('public'))
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS hbd2vka07dx85pkb;
+DROP DATABASE IF EXISTS community_db;
 
-CREATE DATABASE hbd2vka07dx85pkb;
+CREATE DATABASE community_db;

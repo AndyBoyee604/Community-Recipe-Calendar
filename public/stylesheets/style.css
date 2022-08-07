@@ -1,7 +1,10 @@
 /*Testing this commit*/
 header {
-  padding: 20px 35px;
-  background-color: white;
+  padding: 45px 35px;
+  background-color: #ffe08a;
+  background-size: 100%;
+  background-position: 90%;
+  justify-content: center;
 }
 
 body {

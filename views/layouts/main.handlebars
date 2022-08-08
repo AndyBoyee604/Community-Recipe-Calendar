@@ -28,6 +28,18 @@
                 <a>
                </a>
              </div>
+            {{!-- still need to style these. I just added them for functionality --}}
+            <h1>
+            <a href="/">Home</a>
+            </h1>
+             <nav>
+            {{#if loggedIn}}
+            <a href="/dashboard">Dashboard</a>
+            <button id="logout" class="button is-white">Logout</button>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
+        </nav>
         </header>
    {{! page header ends}}
 

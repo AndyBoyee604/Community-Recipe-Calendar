@@ -5,9 +5,10 @@ const homeRoutes = require('./home-routes.js');
 //TODO: remove '/' from api. only using it to test my routes 
 router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
+//router.use('/api', apiRoutes);
 
 router.use((req, res) => {
-    res.status(404).end();
+  res.status(404).end();
 });
 
 module.exports = router;

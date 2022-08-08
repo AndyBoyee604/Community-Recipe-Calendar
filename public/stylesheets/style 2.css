@@ -1,1 +1,28 @@
 /*Testing this commit*/
+header {
+  padding: 45px 35px;
+  background-color: #ffe08a;
+  background-size: 100%;
+  background-position: 90%;
+  justify-content: center;
+}
+
+body {
+  background-color: #ffe08a;
+}
+
+footer {
+  background: #ffe08a;
+  padding: 40px 35px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.align-center {
+  align-items: center;
+}
+
+#link {
+  align-items: flex-start;
+}

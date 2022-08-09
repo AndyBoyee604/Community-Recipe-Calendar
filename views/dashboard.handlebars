@@ -32,6 +32,22 @@
 </section>
 {{/if}}
 
-
+{{!-- Was messing around this. Don't have to include it --}}
+<article>
+  <h2> Create a Recipe</h2>
+  <form class="recipe-form">
+    <div>
+        <p><strong>Title of Recipe:</strong><br>
+        <input type="text" name="recipe-owner">
+        <p><strong>Description:</strong><br>
+        <input type="text" name="recipe-description">
+        <p><strong>Ingredients:</strong><br>
+        <textarea name="recipe-ingredients"></textarea>
+        <P><strong>Instructions:</strong><br>
+        <textarea name="recipe-instructions"></textarea>
+        <P><input type="submit" name="submit" value="Add Recipe"></p>
+    </div>
+  </form>
+</article>
 
 <script src="/javascript/add-post.js"></script>

@@ -25,10 +25,8 @@ Comment.init(
         key: 'id'
       }
     },
-    //TODO: check to make sure on delete cascade works. (if post is deleted then comments associated with it should be deleted too)
     post_id: {
       type: DataTypes.INTEGER,
-      // onDelete: cascade, 
       references: {
         model: 'post',
         key: 'id'

@@ -23,34 +23,18 @@
 {{#each recipes as |recipe|}}
 <div>
     {{> recipes recipe }}
+    <a href="/recipe/edit/{{recipe.id}}" class="edit-link">Edit Recipe</a>
 </div>
 {{/each}}
 </article>
 {{/if}}
 
 
-<article>
-  <a href="/recipe"> &larr; Back to recipes</a>
-  <h2>
-    Would you like to make changes to the recipe?
-  </h2>
-  <form class="edit-recipe-form">
-      <div>
-       <input type="text" name="recipe_title" value="{{recipe.recipe_title}}" />
-       <input type="text" name="description" value="{{recipe.description}}" />
-       <textarea name="ingredients">{{ingredients}}</textarea>
-       <textarea name="instructions">{{instructions}}</textarea>
-       <input type="submit" name="submit" value="Save Changes" />
-   </div>
-    <button type="submit">Save Recipe</button>
-    <button type="button" class="delete-recipe-btn">Delete Recipe</button>
-  </form>
-</article>
+<a href="/recipe"> &uarr; Back to the top</a>
 
 
 <script src="/public/javascript/add-recipe.js"></script>
-<script src="/public/javascript/edit-recipe.js"></script>
-<script src="/public/javascript/delete-recipe.js"></script>
+
 
 
 

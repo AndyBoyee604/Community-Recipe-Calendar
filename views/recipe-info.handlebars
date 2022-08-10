@@ -1,0 +1,56 @@
+<br>
+<section>
+  <h2 class="has-text-weight-medium is-size-6 has-text-black is-italic">Complete the Form Below to Add a New Recipe</h2>
+<br>
+ <form class="new-recipe-form">
+   <div>
+       <p><strong>Title</strong><br>
+       <input type="text" name="recipe_title">
+       <p><strong>Description</strong><br>
+       <input type="text" name="description">
+        <p><strong>Ingredients</strong><br>
+       <textarea name="ingredients"></textarea>
+       <P><strong>Instructions</strong><br>
+       <textarea name="instructions"></textarea>
+       <input type="submit" name="submit" value="Add Recipe"></input>
+   </div>
+ </form>
+</section>
+<br>
+
+{{#if recipes.length}}
+<article>
+{{#each recipes as |recipe|}}
+<div>
+    {{> recipes recipe }}
+</div>
+{{/each}}
+</article>
+{{/if}}
+
+
+<article>
+  <a href="/recipe"> &larr; Back to recipes</a>
+  <h2>
+    Would you like to make changes to the recipe?
+  </h2>
+  <form class="edit-recipe-form">
+      <div>
+       <input type="text" name="recipe_title" value="{{recipe.recipe_title}}" />
+       <input type="text" name="description" value="{{recipe.description}}" />
+       <textarea name="ingredients">{{ingredients}}</textarea>
+       <textarea name="instructions">{{instructions}}</textarea>
+       <input type="submit" name="submit" value="Save Changes" />
+   </div>
+    <button type="submit">Save Recipe</button>
+    <button type="button" class="delete-recipe-btn">Delete Recipe</button>
+  </form>
+</article>
+
+
+<script src="/public/javascript/add-recipe.js"></script>
+<script src="/public/javascript/edit-recipe.js"></script>
+<script src="/public/javascript/delete-recipe.js"></script>
+
+
+

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User, Comment} = require('../models');
+const { Post, User, Comment, Recipe} = require('../models');
 
 
 router.get('/', (req, res) => {
@@ -94,7 +94,40 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
     });
   });
-      
+  
+
+  // Can only access the dashboard if they are logged in
+  router.get('/recipe', (req, res) => {
+    Recipe.findAll({
+      where: {
+        // use the ID from the session instead of body
+        user_id: req.session.user_id
+      },
+      attributes: [
+        'id',
+        'description',
+        'recipe_title',
+        'ingredients',
+        'instructions',
+        'created_at'
+      ],
+      include: [
+        {
+          model: User,
+          attributes: ['username']
+        }
+      ]
+    })
+      .then(dbRecipeData => {
+        // serialize data before passing to template
+        const recipes = dbRecipeData.map(recipe => recipe.get({ plain: true }));
+        res.render('recipe-info', { recipes, loggedIn: true });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
   
   
   module.exports = router;

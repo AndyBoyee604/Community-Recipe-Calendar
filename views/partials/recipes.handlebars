@@ -1,10 +1,10 @@
 <article>
  <h2> Create a Recipe</h2>
- <form class="recipe-form">
+ <form>
    <div>
-       <p><strong>{{recipe_title}}</strong><br>
-       <input type="text" name="recipe-title">
-       <p><strong>{{description}}</strong><br>
+       <h3{{recipe_title}}</h3>
+       <input type="text" name="recipe_title">
+       <p><strong>{{recipe.description}}</strong><br>
        <input type="text" name="description">
         <p><strong>{{ingredients}}</strong><br>
        <textarea name="ingredients"></textarea>
@@ -13,4 +13,5 @@
        <P><input type="submit" name="submit" value="Add Recipe"></p>
    </div>
  </form>
-</article>
+
+

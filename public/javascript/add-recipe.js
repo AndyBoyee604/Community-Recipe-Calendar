@@ -1,8 +1,8 @@
 async function newRecipeFormHandler(event) {
     event.preventDefault();
   
-    const recipe_title = document.querySelector('input[name="recipe-title"]').value;
-    const description = document.querySelector('textarea[name="description"]').value;
+    const recipe_title = document.querySelector('input[name="recipe_title"]').value;
+    const description = document.querySelector('input[name="description"]').value;
     const ingredients = document.querySelector('textarea[name="ingredients"]').value;
     const instructions = document.querySelector('textarea[name="instructions"]').value;
     

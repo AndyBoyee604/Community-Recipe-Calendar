@@ -1,8 +1,12 @@
 <article>
   <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2>
-    Edit Recipe
-  </h2>
+</article>
+<br>
+<article>
+  <p class="title is-4 has-text-grey-dark">
+    Edit Your Recipe
+  </p>
+  
   <form class="edit-post-form">
     <div>
       <input name="post-title" type="text" value="{{post.title}}" />
@@ -10,14 +14,14 @@
     </div>
     <div>
       by you on {{format_date post.created_at}}
-    
     </div>
-    <button type="submit">Save Recipe</button>
-    <button type="button" class="delete-post-btn">Delete Recipe</button>
+    <br>
+    <button type="submit" class="button is-small is-success">Save Recipe</button>
+    <button type="button" class="delete-post-btn button is-small is-danger">Delete Recipe</button>
   </form>
 </article>
 
-
+<br>
 
 <form class="comment-form">
   <div>

@@ -1,11 +1,15 @@
 <article class="post">
-  <div class="title">
-    <a href="{{post_url}}" target="_blank">{{title}}</a>
+  <div class="title is-size-5-fullhd has-text-link-dark">
+    <a class="has-text-link" href="{{post_url}}" target="_blank">{{title}}</a>
     <span>({{format_url post_url}})</span>
-  </div>
-  <div class="meta">
-   by {{user.username}} on {{format_date created_at}}
-    |
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    <div class="meta has-text-grey-dark">
+      by
+      {{user.username}}
+      on
+      {{format_date created_at}}
+      |
+      <a href="/post/{{id}}">{{comments.length}}
+        {{format_plural "comment" comments.length}}</a>
+    </div>
   </div>
 </article>

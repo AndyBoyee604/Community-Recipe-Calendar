@@ -1,0 +1,40 @@
+<br>
+<section>
+  <h2 class="has-text-weight-medium is-size-6 has-text-black is-italic">Complete the Form Below to Add a New Recipe</h2>
+<br>
+ <form class="new-recipe-form">
+   <div>
+       <p><strong>Title</strong><br>
+       <input type="text" name="recipe_title">
+       <p><strong>Description</strong><br>
+       <input type="text" name="description">
+        <p><strong>Ingredients</strong><br>
+       <textarea name="ingredients"></textarea>
+       <P><strong>Instructions</strong><br>
+       <textarea name="instructions"></textarea>
+   </div>
+   <div> <button type="submit" class="btn button has-background-primary has-text-white">Create</button> </div>
+ </form>
+</section>
+<br>
+
+{{#if recipes.length}}
+<article>
+{{#each recipes as |recipe|}}
+<div>
+    {{> recipes recipe }}
+    <a href="/recipe/edit/{{recipe.id}}" class="edit-link">Edit Recipe</a>
+</div>
+{{/each}}
+</article>
+{{/if}}
+
+
+<a href="/recipe"> &uarr; Back to the top</a>
+
+
+<script src="/public/javascript/add-recipe.js"></script>
+
+
+
+

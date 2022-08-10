@@ -1,6 +1,6 @@
 <br>
 <section>
-  <h2 class="has-text-weight-medium is-size-6 has-text-black is-italic">Complete the Form Below to Add a New Recipe</h2>
+  <h2 class="title is-4 has-text-weight-medium has-text-black is-italic">Complete the Form Below to Share a New Recipe</h2>
 <br>
   <form class="new-post-form">
     <div>
@@ -13,6 +13,7 @@
       <input id="post-url" name="post-url"/>
     </div>
     <br>
+  
     <button type="submit" class="btn button has-background-primary has-text-white">Share</button>
   </form>
 </section>
@@ -20,7 +21,7 @@
 
 {{#if posts.length}}
 <section>
-  <h2>Your Recipe</h2>
+    <p class="title is-4 has-text-dark has-text-weight-medium has-text-centered-fullhd is-italic is-family-primary">View List of Shared Recipes Below</p>
   <ol>
     {{#each posts as |post|}}
     <li>

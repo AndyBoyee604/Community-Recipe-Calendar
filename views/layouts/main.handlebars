@@ -13,24 +13,30 @@
 
 {{! page body start}}
   <body>
-  {{! page header start}}
-      <header>
+      <header class="has-background-warning">
+        <br>
         <!--<img src="/public/images/Header Image.png"-->
-            <h1>
-            <a href="/">Login</a>
-            </h1>
-             <nav>
-            {{#if loggedIn}}
-            <a href="/dashboard">Dashboard</a>
-            <a href="/recipe">Recipe</a>
-            <a href="/random-recipe">Random</a>
-            <button id="logout" class="button is-white has-text-primary">Logout</button>
+             <nav id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+      
+            {{!-- <a href="/">Login</a> --}}
+          
+          {{#if loggedIn}}
+           <span><a class="button is-success has-text-white" href="/dashboard">Share Recipe</a>
+            <a class="button is-success has-text-white" href="/random-recipe">Get Recipe</a>
+             <a class="button is-success has-text-white" href="/dashboard">Dashboard</a>
+            <a class="button is-success has-text-white"href="/recipe">Recipe</a>
+            <button id="logout" class="button is-light has-text-dark">Logout</button>
+           
+            {{!-- <button id="logout" class="button is-white has-text-primary">Logout</button> --}}
             {{else}}
             <div><a class="button is-primary has-text-white is-center" href="/login">Login</a></div>
             {{/if}}
               </span>
             </div>
         </nav>
+        </header>
+        
    {{! page header ends}}
 
   {{! page logo images}}

@@ -15,14 +15,12 @@ randomizeMe.addEventListener('click', () => {
 const createMeal = meal => {
   const ingredients = [];
 
-  // Get all ingredients from the object. Up to 20
   for (let i = 1; i <= 20; i++) {
     if (meal[`strIngredient${i}`]) {
       ingredients.push(
         `${meal[`strIngredient${i}`]} - ${meal[`strMeasure${i}`]}`
       );
     } else {
-      // Stop if there are no more ingredients
       break;
     }
   }

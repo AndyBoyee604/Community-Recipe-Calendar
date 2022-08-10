@@ -1,6 +1,6 @@
 <br>
 <section>
-  <h2 class="has-text-weight-medium is-size-6 has-text-black is-italic">Complete the Form Below to Add a New Recipe</h2>
+  <h2 class="title is-4 has-text-weight-medium has-text-black is-italic">Complete the Form Below to Add a New Recipe</h2>
 <br>
   <form class="new-post-form">
     <div>
@@ -13,23 +13,25 @@
       <input id="post-url" name="post-url"/>
     </div>
     <br>
-    <button type="submit" class="btn button has-background-primary has-text-white">Create</button>
+    <button type="submit" class="btn button is-small has-background-primary has-text-white">Create</button>
   </form>
 </section>
 <br>
-
+<br>
 {{#if posts.length}}
 <section>
-  <h2>Your Recipe</h2>
+  <p class="title is-4 has-text-dark has-text-weight-medium has-text-centered-fullhd is-italic is-family-primary">View Shared Recipe List Below:</p>
+  <div class="has-text-grey-dark is-italic is-size-6-fullhd">
   <ol>
     {{#each posts as |post|}}
-    <li>
+    <li class="is-size-6">
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link has-background-warning-light is-italic has-text-danger-dark">Edit Recipe</a>
+      <a href="/dashboard/edit/{{post.id}}" class="button is-small edit-link has-background-warning-light has-text-grey-dark is-size-7-fullhd">Edit Recipe</a>
     </li>
-    {{/each}}
     <br>
+    {{/each}}
   </ol>
+  </div>
 </section>
 {{/if}}
 

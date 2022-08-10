@@ -31,6 +31,7 @@ footer {
 
 body {
   background-color: #ffe08a;
+  padding: 5px;
 }
 
 .navbar-end {
@@ -43,6 +44,7 @@ header {
   background-image: url("/public/images/header-img.png");
   background-size: cover;
   height: 100px;
+  padding: 0px;
 }
 
 #meal.strMealThumb {
@@ -50,4 +52,8 @@ header {
   object-fit: contain;
   width: 10%;
   justify-content: center;
+}
+
+main {
+  padding: 20px;
 }

@@ -25,9 +25,10 @@
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Recipe</a>
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link has-background-warning-light is-italic has-text-danger-dark">Edit Recipe</a>
     </li>
     {{/each}}
+    <br>
   </ol>
 </section>
 {{/if}}

@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Community-Recipe-Me</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css">
     <link rel="stylesheet" href="/public/stylesheets/style.css" />
   </head>
 {{! page head end}}
@@ -23,15 +22,16 @@
             <div class="navbar-end">
                 <a>
                </a>
-             </div>
             {{! <a class="button is-white has-text-primary" href="/">Home</a> }}
             {{#if loggedIn}}
-            <a class="button is-success is-light has-text-primary" href="/dashboard">Add Recipe</a>
+           <span><a class="button is-success is-light has-text-primary" href="/dashboard">Add Recipe</a>
             <a class="button is-success is-light has-text-primary" href="/random-recipe">Get Recipe</a>
             <button id="logout" class="button is-success is-light has-text-primary">Logout</button>
             {{else}}
-            <a class="button is-primary has-text-white" href="/login">Login</a>
+            <div><a class="button is-primary has-text-white is-center" href="/login">Login</a></div>
             {{/if}}
+              </span>
+            </div>
         </nav>
    {{! page header ends}}
 
@@ -41,6 +41,8 @@
         <div id="logo" class="align-text-center">
           <img src="/public/images/page-name-text2.png">
         </div>
+        <br>
+        
       <div>
       <img src="/public/images/logo-9.png">
          <h1 class="subtitle is-size-6-fullhd has-text-grey has-text-centered">

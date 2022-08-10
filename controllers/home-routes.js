@@ -95,6 +95,8 @@ router.get('/', (req, res) => {
     });
   });
       
-  
+  router.get('/random-recipe', (req, res) => {
+    res.render('random-recipe');
+  });
   
   module.exports = router;

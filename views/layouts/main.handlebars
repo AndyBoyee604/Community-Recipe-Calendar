@@ -1,48 +1,93 @@
 <html lang="en">
-
+{{! page head start}}
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipe-Me</title>
-    <link rel="stylesheet" href="/public/css/style.css" />
+    <title>Community-Recipe-Me</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    {{! <link rel="stylesheet" href="/public/stylesheets/style.css" />}}
   </head>
+{{! page head end}}
 
-  {{! -- Page body start }}
+{{! page body start}}
   <body>
-    <div class="wrapper">
-      {{! --header start }}
+  {{! page header start}}
       <header>
-        <h1>
-          <a href="/">Recipe-Me</a>
+        <!--<img src="/public/images/Header Image.png"-->
+          </div>
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item">
+              </a>
+                <div class="navbar-end">
+                  <button class="button is-white has-text-primary">Logout<href="./../"> <!--Need to add logout functionality-->
+                  </a>
+                <a>
+               </a>
+             </div>
+            {{!-- still need to style these. I just added them for functionality --}}
+            <h1>
+            <a href="/">Home</a>
+            </h1>
+             <nav>
+            {{#if loggedIn}}
+            <a href="/dashboard">Dashboard</a>
+            <button id="logout" class="button is-white">Logout</button>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
+        </nav>
+        </header>
+   {{! page header ends}}
+
+  {{! page logo images}}
+   <section class="has-background-warning has-text-centered">
+      <p class="has-text-centered">
+        <div id="logo" class="align-text-center">
+          <img src="/public/images/page-name-text2.png">
+        </div>
+      <div>
+      <img src="/public/images/page-name-text2.png">
+         <h1 class="subtitle is-size-6-fullhd has-text-grey has-text-centered">
+        </div>
+   </section>
+<br>
+        {{! Add Recipe Section Start}}
+      <section class="has-text-centered">
+        <h1 class="button is-white">
+          <a class="has-text-primary" href="/dashboard">Add Recipe</a>
         </h1>
-        {{! navigation start }}
-        <nav>
-          {{! logout and login buttons on page w/ dashboard button, can rename if wanted}}
+      </section>
+      <br>
+        {{!-- <section class="has-background-warning has-text-centered">
+          {{! logout and login buttons on page
           {{#if loggedIn}}
             <a href="/dashboard">dashboard</a>
             <button id="logout" class="btn-no-style">logout</button>
           {{else}}
-            <a href="/login">login</a>
+          <h1 class="button is-white">
+            <a class="has-text-primary" href="/login">Sign Up/Login</a>
+          </h1>
           {{/if}}
-        </nav>
-        {{! navigation end}}
-      </header>
-      {{! --header end }}
-      <main>
+        </section> --}}
+    <br>
+      <main class="has-background-white has-text-centered-fullhd">
         {{{body}}}
       </main>
 
       {{! --page footer }}
-      <footer class="footer">
-        <p>&copy; 2022 Recipe Me</p>
+      <footer class="footer has-background-warning has-text-centered-fullhd">
+        <p class="has-text-centered-fullhd">&copy; 2022 Community Recipe Me</p>
       </footer>
     </div>
 
     {{! The below is for a logout function located under public-javascript-logoutjs}}
     {{#if loggedIn}}
-      <script src="/javascript/logout.js"></script>
+      <script src="/public/javascript/logout.js"></script>
     {{/if}}
-
   </body>
   {{! -- Page body end }}
 </html>

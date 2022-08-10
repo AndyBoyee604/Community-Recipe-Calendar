@@ -32,3 +32,16 @@ body {
   display: flex;
   justify-content: end;
 }
+
+header {
+  background-image: url("/public/images/header-img.png");
+  background-size: cover;
+  height: 100px;
+}
+
+#meal.strMealThumb {
+  margin: 16px auto;
+  object-fit: contain;
+  width: 10%;
+  justify-content: center;
+}

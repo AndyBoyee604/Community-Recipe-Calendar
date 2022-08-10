@@ -17,25 +17,14 @@
   {{! page header start}}
       <header>
         <!--<img src="/public/images/Header Image.png"-->
-          </div>
-          <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-end">
-              <a class="navbar-item">
-              </a>
-                <div class="navbar-end">
-                  <button class="button is-white has-text-primary">Logout<href="./../"> <!--Need to add logout functionality-->
-                  </a>
-                <a>
-               </a>
-             </div>
-            {{!-- still need to style these. I just added them for functionality --}}
             <h1>
             <a href="/">Home</a>
             </h1>
              <nav>
             {{#if loggedIn}}
             <a href="/dashboard">Dashboard</a>
-            <button id="logout" class="button is-white">Logout</button>
+            <a href="/recipe">Recipe</a>
+            <button id="logout" class="button is-white has-text-primary">Logout</button>
             {{else}}
             <a href="/login">Login</a>
             {{/if}}

@@ -7,10 +7,6 @@ header {
   justify-content: center;
 }
 
-body {
-  background-color: #ffe08a;
-}
-
 footer {
   background: #ffe08a;
   padding: 40px 35px;
@@ -26,3 +22,13 @@ footer {
 #link {
   align-items: flex-start;
 } */
+
+body {
+  background-color: #ffe08a;
+}
+
+.navbar-end {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}

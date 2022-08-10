@@ -15,33 +15,27 @@
 {{! page body start}}
   <body>
   {{! page header start}}
-      <header>
-        <!--<img src="/public/images/Header Image.png"-->
+
+      <header class="has-background-warning">
+        <br>
+      </header>
           </div>
-          <div id="navbarBasicExample" class="navbar-menu">
+          <nav id="navbarBasicExample" class="navbar-menu has-background-warning">
             <div class="navbar-end">
-              <a class="navbar-item">
-              </a>
-                <div class="navbar-end">
-                  <button class="button is-white has-text-primary">Logout<href="./../"> <!--Need to add logout functionality-->
-                  </a>
                 <a>
                </a>
              </div>
-            {{!-- still need to style these. I just added them for functionality --}}
-            <h1>
-            <a href="/">Home</a>
-            </h1>
-             <nav>
+           
+            {{! <a class="button is-white has-text-primary" href="/">Home</a> }}
+         
             {{#if loggedIn}}
-            <a href="/dashboard">Dashboard</a>
-            <a href="/random-recipe">Random Recipe</a>
-            <button id="logout" class="button is-white">Logout</button>
+            <a class="button is-success is-light has-text-primary" href="/dashboard">Dashboard</a>
+            <a class="button is-success is-light has-text-primary" href="/random-recipe">Random Recipe</a>
+            <button id="logout" class="button is-success is-light has-text-primary">Logout</button>
             {{else}}
-            <a href="/login">Login</a>
+            <a class="button is-primary has-text-white" href="/login">Login</a>
             {{/if}}
         </nav>
-        </header>
    {{! page header ends}}
 
   {{! page logo images}}
@@ -56,13 +50,13 @@
         </div>
    </section>
 <br>
-        {{! Add Recipe Section Start}}
+        {{!-- {{! Add Recipe Section Start}}
       <section class="has-text-centered">
         <h1 class="button is-white">
           <a class="has-text-primary" href="/dashboard">Add Recipe</a>
         </h1>
       </section>
-      <br>
+      <br> --}}
         {{!-- <section class="has-background-warning has-text-centered">
           {{! logout and login buttons on page
           {{#if loggedIn}}

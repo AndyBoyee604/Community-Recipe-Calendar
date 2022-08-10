@@ -35,8 +35,10 @@
              <nav>
             {{#if loggedIn}}
             <a href="/dashboard">Dashboard</a>
+            <a href="/random-recipe">Random Recipe</a>
             <button id="logout" class="button is-white">Logout</button>
             {{else}}
+            <a href="/random-recipe">Random Recipe</a>
             <a href="/login">Login</a>
             {{/if}}
         </nav>

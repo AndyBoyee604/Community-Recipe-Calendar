@@ -87,11 +87,15 @@ header {
   padding-bottom: 5px;
 }
 
-#br {
+/* #br {
   display: block;
   margin-bottom: 5em;
-}
+} */
 
 #recipe {
   padding: 100px;
+}
+
+#recipe-submit {
+  justify-content: center;
 }

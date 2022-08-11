@@ -71,3 +71,27 @@ header {
 #edit-button {
   padding: 20px;
 }
+
+#random-img {
+  height: 198px;
+  width: 198px;
+  justify-content: center;
+}
+
+#username-signup,
+#password-signup,
+#password-login,
+#username-login {
+  height: 30px;
+  width: 200px;
+  padding-bottom: 5px;
+}
+
+#br {
+  display: block;
+  margin-bottom: 5em;
+}
+
+#recipe {
+  padding: 100px;
+}

@@ -4,43 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Community-Recipe-Me</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-    {{! <link rel="stylesheet" href="/public/stylesheets/style.css" />}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css">
+    <link rel="stylesheet" href="/public/stylesheets/style.css" />
   </head>
 {{! page head end}}
 
 {{! page body start}}
   <body>
-  {{! page header start}}
-      <header>
+      <header class="has-background-warning">
+        <br>
         <!--<img src="/public/images/Header Image.png"-->
-          </div>
-          <div id="navbarBasicExample" class="navbar-menu">
+             <nav id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item">
-              </a>
-                <div class="navbar-end">
-                  <button class="button is-white has-text-primary">Logout<href="./../"> <!--Need to add logout functionality-->
-                  </a>
-                <a>
-               </a>
-             </div>
-            {{!-- still need to style these. I just added them for functionality --}}
-            <h1>
-            <a href="/">Home</a>
-            </h1>
-             <nav>
-            {{#if loggedIn}}
-            <a href="/dashboard">Dashboard</a>
-            <button id="logout" class="button is-white">Logout</button>
+      
+            {{!-- <a href="/">Login</a> --}}
+  
+          
+          
+          {{#if loggedIn}}
+           <span>
+            {{!-- <a class="button is-success has-text-white" href="/random-recipe">Get Recipe</a> --}}
+                    <a class="button is-success has-text-white" href="/">Home</a>
+            <a class="button is-success has-text-white"href="/recipe">Add Recipe</a>
+            <a class="button is-success has-text-white"href="/random-recipe">Get Recipe</a>
+             <a class="button is-success has-text-white" href="/dashboard">Dashboard</a>
+            <button id="logout" class="button is-light has-text-dark">Logout</button>
+           
+            {{!-- <button id="logout" class="button is-white has-text-primary">Logout</button> --}}
             {{else}}
-            <a href="/login">Login</a>
+            <div><a class="button is-primary has-text-white is-center" href="/login">Login</a></div>
             {{/if}}
+              </span>
+            </div>
         </nav>
         </header>
+        
    {{! page header ends}}
 
   {{! page logo images}}
@@ -49,19 +49,21 @@
         <div id="logo" class="align-text-center">
           <img src="/public/images/page-name-text2.png">
         </div>
+        <br>
+        
       <div>
       <img src="/public/images/logo-9.png">
          <h1 class="subtitle is-size-6-fullhd has-text-grey has-text-centered">
         </div>
    </section>
 <br>
-        {{! Add Recipe Section Start}}
+        {{!-- {{! Add Recipe Section Start}}
       <section class="has-text-centered">
         <h1 class="button is-white">
           <a class="has-text-primary" href="/dashboard">Add Recipe</a>
         </h1>
       </section>
-      <br>
+      <br> --}}
         {{!-- <section class="has-background-warning has-text-centered">
           {{! logout and login buttons on page
           {{#if loggedIn}}

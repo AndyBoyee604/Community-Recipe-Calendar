@@ -20,16 +20,16 @@
             <div class="navbar-end">
       
             {{!-- <a href="/">Login</a> --}}
-          <a class="button is-success has-text-white" href="/">Home</a>
-          <br>
-           <a class="button is-success has-text-white" href="/dashboard">Dashboard</a>
+  
+          
           
           {{#if loggedIn}}
            <span>
             {{!-- <a class="button is-success has-text-white" href="/random-recipe">Get Recipe</a> --}}
+                    <a class="button is-success has-text-white" href="/">Home</a>
             <a class="button is-success has-text-white"href="/recipe">Add Recipe</a>
             <a class="button is-success has-text-white"href="/random-recipe">Get Recipe</a>
-            {{!-- <a class="button is-success has-text-white" href="/dashboard">Dashboard</a> --}}
+             <a class="button is-success has-text-white" href="/dashboard">Dashboard</a>
             <button id="logout" class="button is-light has-text-dark">Logout</button>
            
             {{!-- <button id="logout" class="button is-white has-text-primary">Logout</button> --}}

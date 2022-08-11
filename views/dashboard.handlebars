@@ -4,13 +4,13 @@
 <br>
   <form class="new-post-form">
     <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
+      <label for="post-title" class="subtitle is-5 has-text-weight-medium has-text-grey-dark">Title</label>
+      <input type="text" id="post-title" name="post-title" class="input is-dark is-focused has-text-grey" placeholder="Add Recipe Name Here..." />
     </div>
     <br>
     <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url"/>
+      <label for="post-url" class="subtitle is-5 has-text-weight-medium has-text-grey-dark">Link</label>
+         <input id="post-url" name="comment-body" class="input is-dark is-focused has-text-grey" placeholder="Add Recipe Link Here.." name="post-url"></textarea>
     </div>
     <br>
   
@@ -26,7 +26,7 @@
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link has-background-warning-light is-italic has-text-danger-dark">Edit Recipe</a>
+      <a id="edit-btn" href="/dashboard/edit/{{post.id}}" class="button is-small is-italic is-primary is-outlined has-text-grey-dark has-text-weight-medium">Edit Recipe</a>
     </li>
     {{/each}}
     <br>

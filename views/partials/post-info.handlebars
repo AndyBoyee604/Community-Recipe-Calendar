@@ -2,13 +2,16 @@
   <div class="title is-size-5-fullhd has-text-link-dark">
     <a class="has-text-link" href="{{post_url}}" target="_blank">{{title}}</a>
     <span>({{format_url post_url}})</span>
-    <div class="meta has-text-grey-dark">
+    <div class="meta has-text-grey-dark is-size-6-fullhd">
       by
       {{user.username}}
       on
       {{format_date created_at}}
       |
-      <a href="/post/{{id}}">{{comments.length}}
+      <a
+        class="has-text-success has-background-warning-light"
+        href="/post/{{id}}"
+      >{{comments.length}}
         {{format_plural "comment" comments.length}}</a>
     </div>
   </div>

@@ -12,10 +12,26 @@
 {{! page head end}}
 
 {{! page body start}}
-  <body>
+      <body>
+        <header>
+        </header>
+          </div>
+          <br>
+          <nav id="navbarBasicExample" class="navbar-menu has-background-warning">
+            <div class="navbar-end">
+                <a>
+               </a>
+            {{! <a class="button is-white has-text-primary" href="/">Home</a> }}
+            {{#if loggedIn}}
+           <span><a class="button is-white has-text-primary" href="/dashboard">Add Recipe</a>
+            <a class="button is-white has-text-primary" href="/random-recipe">Get Recipe</a>
+      <body>
       <header class="has-background-warning">
         <br>
         <!--<img src="/public/images/Header Image.png"-->
+
+
+            <button id="logout" class="button is-white has-text-primary">Logout</button>
              <nav id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end">
       
@@ -34,7 +50,7 @@
            
             {{!-- <button id="logout" class="button is-white has-text-primary">Logout</button> --}}
             {{else}}
-            <div><a class="button is-primary has-text-white is-center" href="/login">Login</a></div>
+            <div><a class="button is-primary has-text-white is-center" href="/login">Dashboard</a></div>
             {{/if}}
               </span>
             </div>

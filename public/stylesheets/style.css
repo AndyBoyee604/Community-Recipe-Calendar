@@ -99,3 +99,15 @@ header {
 #recipe-submit {
   justify-content: center;
 }
+
+#recipe-card {
+  width: 450px;
+  justify-content: center;
+  align-items: center;
+}
+
+#recipe-article {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}

@@ -1,21 +1,19 @@
 {{> post-info post}}
-{{>recipes recipe}}
 
 
 {{#if loggedIn}}
 <form class="comment-form">
-  <div>
+  {{!-- We dont need this for the dashboard page<div>
     <textarea name="comment-body"></textarea>
   </div>
 
   <div>
-    <button type="submit">add recipe</button>
+    <button type="submit">add comment</button> --}}
   </div>
 </form>
 {{/if}}
 
 {{> comments post.comments}}
-{{> comments recipe.comments}}
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>

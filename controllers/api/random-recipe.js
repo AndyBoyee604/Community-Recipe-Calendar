@@ -28,7 +28,7 @@ const createMeal = (meal) => {
   const htmlSection = `
 		<div>
 			<div>
-				<img id="random-img" src="${meal.strMealThumb}" alt="">
+				<img src="${meal.strMealThumb}" alt="">
 				${
           meal.strCategory
             ? `<p><strong>Category:</strong> ${meal.strCategory}</p>`
@@ -42,21 +42,16 @@ const createMeal = (meal) => {
                 .join(", ")}</p>`
             : ""
         }
-        <br>
-				<p class="subtitle is-5 has-text-weight-medium has-text-grey-dark is-underlined">Recipe Ingredients:</p>
+				<h5>Ingredients:</h5>
 				<ul>
 					${ingredients.map((ingredient) => `<li>${ingredient}</li>`).join("")}
 				</ul>
 			</div>
-      <br>
 			<div>
-      <p class="subtitle is-5 has-text-weight-medium has-text-grey-dark is-underlined">Cooking Directions</p>
 				<h4>${meal.strMeal}</h4>
 				<p>${meal.strInstructions}</p>
 			</div>
 		</div>
-    <br>
-    <br>
 		
 	`;
   recipeSection.innerHTML = htmlSection;

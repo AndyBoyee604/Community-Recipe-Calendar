@@ -12,7 +12,6 @@
 {{! page head end}}
 
 {{! page body start}}
-<<<<<<< HEAD
       <body>
         <header>
         </header>
@@ -26,26 +25,38 @@
             {{#if loggedIn}}
            <span><a class="button is-white has-text-primary" href="/dashboard">Add Recipe</a>
             <a class="button is-white has-text-primary" href="/random-recipe">Get Recipe</a>
-=======
-  <body>
-  {{! page header start}}
-      <header>
+      <body>
+      <header class="has-background-warning">
+        <br>
         <!--<img src="/public/images/Header Image.png"-->
-            <h1>
-            <a href="/">Home</a>
-            </h1>
-             <nav>
-            {{#if loggedIn}}
-            <a href="/dashboard">Dashboard</a>
-            <a href="/recipe">Recipe</a>
->>>>>>> 819cf3209f512d92f56cab3419bdbb5bfd508e93
+
+
             <button id="logout" class="button is-white has-text-primary">Logout</button>
+             <nav id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+      
+            {{!-- <a href="/">Login</a> --}}
+  
+          
+          
+          {{#if loggedIn}}
+           <span>
+            {{!-- <a class="button is-success has-text-white" href="/random-recipe">Get Recipe</a> --}}
+                    <a class="button is-success has-text-white" href="/">Home</a>
+            <a class="button is-success has-text-white"href="/recipe">Add Recipe</a>
+            <a class="button is-success has-text-white"href="/random-recipe">Get Recipe</a>
+             <a class="button is-success has-text-white" href="/dashboard">Dashboard</a>
+            <button id="logout" class="button is-light has-text-dark">Logout</button>
+           
+            {{!-- <button id="logout" class="button is-white has-text-primary">Logout</button> --}}
             {{else}}
             <div><a class="button is-primary has-text-white is-center" href="/login">Dashboard</a></div>
             {{/if}}
               </span>
             </div>
         </nav>
+        </header>
+        
    {{! page header ends}}
 
   {{! page logo images}}

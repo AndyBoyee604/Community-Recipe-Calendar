@@ -108,7 +108,7 @@ router.put('/:id', withAuth, (req, res) => {
 });
 
 // Can only delete if logged in 
-router.delete('/:id', withAuth, (req, res) => {
+router.delete('/:id', (req, res) => {
   Recipe.destroy({
     where: {
       id: req.params.id

@@ -1,16 +1,19 @@
-<article>
- <form>
-   <div>
-       <p><strong>Title</strong><br>
-       <div name="recipe_title">{{recipe_title}}</div>
-       <p><strong>Description</strong><br>
-       <div name="description">{{description}}</div>
-        <p><strong>Ingredients</strong><br>
-       <div name="ingredients">{{ingredients}}</div>
-       <P><strong>Instructions</strong><br>
-       <div name="instructions">{{instructions}}</div>
+<article id="recipe-article" class="is-center">
+  <div class="column is-one-third">
+ <form class="card is-center">
+  <div class="div has py-4 is-centered align-items-centered">
+      <p class="p has-background-primary has-text-grey-dark"><strong class="strong has-text-warning">Recipe: {{recipe_title}}</strong><br>
+       <p class="p has-background-primary"><strong class="strong has-text-white ">Description</strong><br>
+       <div class="div has-background-primary" name="description">{{description}}</div>
+        <p class="p has-background-primary "><strong class="strong has-text-white ">Ingredients</strong><br>
+       <div class="div has-background-primary" name="ingredients">{{ingredients}}</div>
+       <p class="p has-background-primary"><strong class="strong has-text-white ">Instructions</strong><br>
+       <div class="div has-background-primary" name="instructions">{{instructions}}</div>
    </div>
  </form>
+ </div>
+ </article>
+ <br>
 
 
 

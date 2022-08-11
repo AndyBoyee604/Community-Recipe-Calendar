@@ -9,6 +9,7 @@ async function editRecipeFormHandler(event) {
     const id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
+
     
     const response = await fetch(`/api/recipes/${id}`, {
       method: 'PUT',

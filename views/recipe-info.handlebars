@@ -13,7 +13,9 @@
        <P><strong>Instructions</strong><br>
        <textarea name="instructions"></textarea>
    </div>
-   <div> <button type="submit" class="btn button has-background-primary has-text-white">Create</button> </div>
+   <br>
+   
+   <button type="submit" class="btn button has-background-primary has-text-white">Create</button>
  </form>
 </section>
 <br>
@@ -23,8 +25,9 @@
 {{#each recipes as |recipe|}}
 <div>
     {{> recipes recipe }}
-    <a href="/recipe/edit/{{recipe.id}}" class="edit-link">Edit Recipe</a>
+    <button type="button" id="delete-post-btn" class="btn button has-background-primary has-text-white">Delete Recipe</button>  
 </div>
+
 {{/each}}
 </article>
 {{/if}}
@@ -34,6 +37,7 @@
 
 
 <script src="/public/javascript/add-recipe.js"></script>
+<script src="/public/javascript/delete-recipe.js"></script>
 
 
 

@@ -26,12 +26,10 @@ async function newRecipeFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.render("/recipe");
+    document.location.replace("/recipe");
   } else {
     alert(response.statusText);
   }
 }
 
-document
-  .querySelector(".new-recipe-form")
-  .addEventListener("submit", newRecipeFormHandler);
+document.querySelector(".new-recipe-form").addEventListener("submit", newRecipeFormHandler);

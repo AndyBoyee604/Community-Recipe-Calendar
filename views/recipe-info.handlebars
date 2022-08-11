@@ -2,21 +2,29 @@
 <section>
   <h2 class="has-text-weight-medium is-size-6 has-text-black is-italic">Complete the Form Below to Add a New Recipe</h2>
 <br>
+<div class="columns is-centered">
+  <div class="column is-half">
+
  <form class="new-recipe-form">
-   <div>
-       <p><strong>Title</strong><br>
+  <div class="div has py-4">
+   <div class="card">
+       <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Title</strong><br>
        <input type="text" name="recipe_title">
-       <p><strong>Description</strong><br>
+       <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Description</strong><br>
        <input type="text" name="description">
-        <p><strong>Ingredients</strong><br>
+        <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Ingredients</strong><br>
        <textarea name="ingredients"></textarea>
-       <P><strong>Instructions</strong><br>
+       <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Instructions</strong><br>
        <textarea name="instructions"></textarea>
    </div>
    <br>
    
    <button type="submit" class="btn button has-background-primary has-text-white">Create</button>
+  </div>
  </form>
+
+  </div>
+</div>
 </section>
 <br>
 
@@ -25,7 +33,6 @@
 {{#each recipes as |recipe|}}
 <div>
     {{> recipes recipe }}
-    <button type="button" id="delete-post-btn" class="btn button has-background-primary has-text-white">Delete Recipe</button>  
 </div>
 
 {{/each}}
@@ -37,7 +44,7 @@
 
 
 <script src="/public/javascript/add-recipe.js"></script>
-<script src="/public/javascript/delete-recipe.js"></script>
+
 
 
 

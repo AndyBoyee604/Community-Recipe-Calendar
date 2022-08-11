@@ -25,12 +25,14 @@
 
 <form class="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea id="comment-box" name="comment-body" class="input is-primary" placeholder="Recipe Comments?"></textarea>
   </div>
-
-  <div>
-    <button type="submit">add comment</button>
-  </div>
+  <br>
+<div>
+   <button type="submit" class="button is-small is-link"">Add comment</button>
+</div>
+</div>
+<br>
 </form>
 
 {{> comments post.comments}}

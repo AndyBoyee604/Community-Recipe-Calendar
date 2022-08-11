@@ -24,8 +24,8 @@ router.get("/", (req, res) => {
       },
     ],
   })
-    .then((dbPostData) => {
-      const posts = dbPostData.map((post) => post.get({ plain: true }));
+    .then((dbRecipeData) => {
+      const posts = dbRecipeData.map((post) => post.get({ plain: true }));
       // pass a single post object into the homepage template
       res.render("homepage", {
         posts,
@@ -67,14 +67,14 @@ router.get("/post/:id", (req, res) => {
       },
     ],
   })
-    .then((dbPostData) => {
-      if (!dbPostData) {
+    .then((dbRecipeData) => {
+      if (!dbRecipeData) {
         res.status(404).json({ message: "No post found with this id" });
         return;
       }
 
       // serialize the data
-      const post = dbPostData.get({ plain: true });
+      const post = dbRecipeData.get({ plain: true });
 
       // pass data to template
       res.render("single-post", {
@@ -120,5 +120,41 @@ router.get("/recipe", (req, res) => {
       res.status(500).json(err);
     });
 });
+
+// Can only edit and delete posts if logged in (this will be done through the dashboard)
+router.get('/edit/:id', (req, res) => {
+  Post.findByPk(req.params.id, {
+      attributes: [
+        'id',
+        'description',
+        'recipe_title',
+        'ingredients',
+        'instructions',
+        'created_at'
+    ],
+    include: [
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
+    .then(dbRecipeData => {
+      if (dbRecipeData) {
+        const recipe = dbRecipeData.get({ plain: true });
+        
+        res.render('recipe-info', {
+          recipe,
+          loggedIn: true
+        });
+      } else {
+        res.status(404).end();
+      }
+    })
+    .catch(err => {
+      res.status(500).json(err);
+    });
+});
+
 
 module.exports = router;

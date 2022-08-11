@@ -1,6 +1,6 @@
 <br>
 <section>
-  <h2 class="title is-4 has-text-weight-medium has-text-black is-italic">Complete the Form Below to Add a New Recipe</h2>
+  <h2 class="title is-4 has-text-weight-medium has-text-black is-italic">Complete the Form Below to Share a New Recipe</h2>
 <br>
   <form class="new-post-form">
     <div>
@@ -13,7 +13,7 @@
          <input id="post-url" name="comment-body" class="input is-dark is-focused has-text-grey" placeholder="Add Recipe Link Here.." name="post-url"></textarea>
     </div>
     <br>
-    <button type="submit" class="btn button is-small has-background-primary has-text-white">Create</button>
+  
     <button type="submit" class="btn button has-background-primary has-text-white">Share</button>
   </form>
 </section>
@@ -21,20 +21,20 @@
 <br>
 {{#if posts.length}}
 <section>
-  <p class="title is-4 has-text-dark has-text-weight-medium has-text-centered-fullhd is-italic is-family-primary">View Shared Recipe List Below:</p>
-  <div class="has-text-grey-dark is-italic is-size-6-fullhd">
+    <p class="title is-4 has-text-black has-text-weight-medium has-text-centered-fullhd is-italic is-family-primary">View List of Shared Recipes Below</p>
   <ol>
     {{#each posts as |post|}}
-    <li class="is-size-6">
+    <li>
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="button is-small edit-link has-background-warning-light has-text-grey-dark is-size-7-fullhd">Edit Recipe</a>
+      <a id="edit-btn" href="/dashboard/edit/{{post.id}}" class="button is-small is-italic is-primary is-outlined has-text-grey-dark has-text-weight-medium">Edit Recipe</a>
     </li>
-    <br>
     {{/each}}
+    <br>
   </ol>
-  </div>
 </section>
 {{/if}}
+
+
 
 
 <script src="/public/javascript/add-post.js"></script>

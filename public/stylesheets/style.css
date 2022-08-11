@@ -57,3 +57,17 @@ header {
   height: 50px;
   width: 200px;
 }
+
+#post-url {
+  height: 25px;
+  width: 200px;
+}
+
+#post-title {
+  height: 25px;
+  width: 200px;
+}
+
+#edit-button {
+  padding: 20px;
+}

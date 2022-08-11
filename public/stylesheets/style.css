@@ -31,6 +31,7 @@ footer {
 
 body {
   background-color: #ffe08a;
+  padding: 5px;
 }
 
 .navbar-end {
@@ -43,7 +44,7 @@ header {
   background-image: url("/public/images/header-img.png");
   background-size: cover;
   height: 100px;
-  padding: 6px;
+  padding: 0px;
 }
 
 /* #recipe {
@@ -100,14 +101,7 @@ header {
   justify-content: center;
 }
 
-#recipe-card {
-  width: 450px;
-  justify-content: center;
-  align-items: center;
-}
 
-#recipe-article {
-  justify-content: center;
-  align-items: center;
-  display: flex;
+main {
+  padding: 20px;
 }

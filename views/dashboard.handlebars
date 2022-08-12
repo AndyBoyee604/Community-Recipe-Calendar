@@ -24,11 +24,11 @@
   <div class="has-text-grey-dark is-italic is-size-6-fullhd">
   <ol>
     {{#each posts as |post|}}
-    <div id="recipe-box" class="box has-background-success-light">
+    <div id="recipe-box" class="box has-background-primary-light">
     <ul class="is-size-6">
       {{> post-info post}}
       <br>
-      <a href="/dashboard/edit/{{post.id}}" class="button is-small edit-link has-background-primary has-text-white is-size-7-fullhd">Edit Recipe</a>
+      <a href="/dashboard/edit/{{post.id}}" class="button is-small edit-link has-background-primary has-text-grey-dark is-size-7-fullhd">Edit Recipe</a>
     </ul>
     </div>
     <br>

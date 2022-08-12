@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Post, User, Comment, Recipe } = require("../models");
 
 router.get("/random-recipe", (req, res) => {
-  res.render("random-recipe");
+  res.render("random-recipe", { loggedIn: true });
 });
 
 router.get("/", (req, res) => {

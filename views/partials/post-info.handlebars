@@ -1,8 +1,8 @@
 <article class="post">
-  <div class="title is-size-5-fullhd has-text-link-dark">
+  <div class="title is-size-6-fullhd has-text-link-dark">
     <a class="has-text-link" href="{{post_url}}" target="_blank">{{title}}</a>
     <span>({{format_url post_url}})</span>
-    <div class="meta has-text-grey-dark is-size-6-fullhd">
+    <div class="meta has-text-grey-dark is-size-7-fullhd">
       by
       {{user.username}}
       on
@@ -13,6 +13,8 @@
         href="/post/{{id}}"
       >{{comments.length}}
         {{format_plural "comment" comments.length}}</a>
+      <br />
     </div>
+    <br />
   </div>
 </article>

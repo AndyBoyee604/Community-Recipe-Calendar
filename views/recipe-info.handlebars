@@ -9,9 +9,9 @@
   <div id="recipe-results" class="div has py-4">
    <div class="card is-centered">
        <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Title</strong><br>
-       <input type="text" name="recipe_title">
+       <input type="text" name="recipe_title" />
        <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Description</strong><br>
-       <input type="text" name="description">
+       <input type="text" name="description" />
         <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Ingredients</strong><br>
        <textarea name="ingredients"></textarea>
        <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Instructions</strong><br>
@@ -35,6 +35,7 @@
 {{#each recipes as |recipe|}}
 <div>
     {{> recipes recipe }}
+     <a href="/recipe/edit/{{recipe.id}}" class="button is-small edit-link has-background-primary has-text-grey-dark is-size-7-fullhd">Edit Recipe</a>
 </div>
 {{/each}}
 </article>

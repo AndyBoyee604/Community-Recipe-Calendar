@@ -12,7 +12,7 @@ async function deleteRecipe(event) {
     
   
     if (response.ok) {
-      document.location.replace('/recipe');
+      document.location.replace('/recipe/');
     } else {
       alert(response.statusText);
     }
@@ -20,4 +20,4 @@ async function deleteRecipe(event) {
   
  
 
-  document.querySelector('#delete-post-btn').addEventListener('click', deleteRecipe);
+  document.querySelector('.delete-recipe-btn').addEventListener('click', deleteRecipe);

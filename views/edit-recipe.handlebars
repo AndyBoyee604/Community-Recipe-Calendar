@@ -1,0 +1,36 @@
+<article>
+  <a href="/recipe"> &larr; Back to recipes</a>
+</article>
+<br>
+<article class="columns is-centered">
+  <div id="recipe-card" class="column is-half is-centered">
+<form class="edit-recipe-form">
+  <div id="recipe-results" class="div has py-4">
+   <div class="card is-centered">
+
+       <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Title</strong><br>
+       <input type="text" name="recipe_title" value="{{recipe.recipe_title}}" />
+       <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Description</strong><br>
+       <input type="text" name="description" value="{{recipe.description}}" />
+        <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Ingredients</strong><br>
+       <textarea name="ingredients">{{recipe.ingredients}}</textarea>
+       <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Instructions</strong><br>
+       <textarea name="instructions">{{recipe.instructions}}</textarea>
+       <br>
+   </div>
+   <br>
+   
+   <button type="submit" class="btn button has-background-primary has-text-white">Save</button>
+   <button type="button" class="delete-recipe-btn btn button has-background-primary has-text-white">Delete</button>
+  </div>
+ </form>
+ </div>
+</div>
+</article>
+
+<br>
+
+
+
+<script src="/public/javascript/edit-recipe.js"></script>
+<script src="/public/javascript/delete-recipe.js"></script>

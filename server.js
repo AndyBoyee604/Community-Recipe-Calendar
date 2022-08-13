@@ -1,5 +1,4 @@
-//routes
-
+// Packages required 
 const helpers = require("./utils/helpers");
 const path = require("path");
 const express = require("express");
@@ -8,6 +7,7 @@ const sequelize = require("./config/connection");
 const exphbs = require("express-handlebars");
 const hbs = exphbs.create({ helpers });
 const session = require("express-session");
+const morgan = require('morgan');
 
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
@@ -23,6 +23,7 @@ const sess = {
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+app.use(morgan('tiny'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

@@ -1,9 +1,8 @@
-{{> post-info post}}
-
+{{> post-info post }}
 
 {{#if loggedIn}}
 <form class="comment-form">
-  We dont need this for the dashboard page<div>
+  <div>
     <textarea name="comment-body"></textarea>
   </div>
 
@@ -13,7 +12,11 @@
 </form>
 {{/if}}
 
+
 {{> comments post.comments}}
+
+
+
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>

@@ -1,14 +1,20 @@
-<div class="comments is-4-fullhd">
+<div class="column is-half is-offset-one-quarter">
   {{#each this}}
-    <section class="comment">
-      <div class="meta">
+    <section>
+      <div class="meta pb-2 has-text-white is-size-8-fullhd has-background-primary">
+        <p class="p has background-warning">
         {{user.username}}
         on
         {{format_date created_at}}
+        </p>
       </div>
-      <div class="text">
+      <div class="column is-half is-offset-one-quarter">
         {{comment_text}}
       </div>
+
+  
+
+
     </section>
   {{/each}}
 </div>

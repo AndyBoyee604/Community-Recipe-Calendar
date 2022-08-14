@@ -4,24 +4,29 @@
   padding: 0;
 }
 
+/* styling for body */
 body {
   background-color: #ffe08a;
   padding: 5px;
 }
 
+/* styling for navbar */
 .navbar-end {
   width: 100%;
   display: flex;
   justify-content: end;
 }
 
+/*styling for header */
 header {
   background-image: url("/public/images/header-img.png");
   background-size: cover;
   height: 100px;
-  padding: 0px;
+  width: 100%;
+  padding: 30px;
 }
 
+/* styling on dashboard start */
 #comment-box {
   height: 50px;
   width: 200px;
@@ -41,12 +46,16 @@ header {
   padding: 20px;
 }
 
+/* styling on dashboard end */
+
+/* styling for api image on get recipe page */
 #random-img {
   height: 198px;
   width: 198px;
   justify-content: center;
 }
 
+/*styling for login page */
 #username-signup,
 #password-signup,
 #password-login,
@@ -60,18 +69,47 @@ header {
   justify-content: center;
 }
 
-#recipe-card {
+#recipe-results {
+  width: 500;
   justify-content: center;
+  margin: 10 60 60 90px;
 }
 
 main {
   padding: 20px;
 }
 
+/*styling for add recipe input box */
 #recipe-box {
-  width: 300px;
+  width: 600px;
   justify-content: center;
   align-items: center;
   align-content: center;
   display: inline-flex;
+}
+
+/* styling for posted recipes on dashboard page */
+#recipe-article {
+  display: flex;
+  width: 1200px;
+  justify-content: center;
+  margin: 5 50 20 115px;
+}
+
+#recipe-title {
+  height: 25px;
+  width: 200px;
+  padding-bottom: 5px;
+  font-size: 9pt;
+}
+
+/*styling for posted recipes on add recipe page*/
+
+#recipe-instr,
+#recipe-descr,
+#recipe-ingr {
+  height: 35px;
+  width: 200px;
+  padding-bottom: 5px;
+  font-size: 9pt;
 }

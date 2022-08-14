@@ -7,7 +7,6 @@
 /* styling for body */
 body {
   background-color: #ffe08a;
-  padding: 5px;
 }
 
 /* styling for navbar */
@@ -73,10 +72,13 @@ header {
   width: 500;
   justify-content: center;
   margin: 10 60 60 90px;
+
 }
 
-main {
-  padding: 20px;
+#recipe-article {
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 /*styling for add recipe input box */

@@ -13,7 +13,6 @@
          <input id="post-url" name="comment-body" class="input is-dark is-focused has-text-grey" placeholder="Add Recipe Link Here.." name="post-url"></textarea>
     </div>
     <br>
-  
     <button type="submit" class="btn button has-background-primary has-text-white">Share</button>
   </form>
 </section>
@@ -24,17 +23,19 @@
     <p class="title is-4 has-text-black has-text-weight-medium has-text-centered-fullhd is-italic is-family-primary">View List of Shared Recipes Below</p>
   <ol>
     {{#each posts as |post|}}
-    <li>
+    <div id="recipe-box" class="box has-background-primary-light">
+    <ul class="is-size-6">
       {{> post-info post}}
-      <a id="edit-btn" href="/dashboard/edit/{{post.id}}" class="button is-small is-italic is-primary is-outlined has-text-grey-dark has-text-weight-medium">Edit Recipe</a>
-    </li>
+      <br>
+      <a href="/dashboard/edit/{{post.id}}" class="button is-small edit-link has-background-primary has-text-grey-dark is-size-7-fullhd">Edit Recipe</a>
+    </ul>
+    </div>
+    <br>
     {{/each}}
     <br>
   </ol>
 </section>
 {{/if}}
-
-
 
 
 <script src="/public/javascript/add-post.js"></script>

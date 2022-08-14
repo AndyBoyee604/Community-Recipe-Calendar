@@ -3,20 +3,19 @@
   <h2 class="has-text-weight-medium is-size-6 has-text-black is-italic">Complete the Form Below to Add a New Recipe</h2>
 <br>
 <div class="columns is-centered">
-  <div id="recipe-card" class="column is-half">
+  <div id="recipe-card" class="column is-half is-centered">
 
- <form class="new-recipe-form align-items">
-  <div id="recipe-results" class="div has py-4">
+ <form id="recipe-results" class="new-recipe-form">
+  <div class="div has py-4 is-centered">
    <div class="card is-centered">
-       <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Title</strong><br>
-       <input type="text" name="recipe_title">
+       <p class="p pt-3 has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Title</strong><br>
+       <input type="text"  id="recipe-title" name="recipe_title" class="input is-primary is-focused has-text-grey" Placeholder="Name of Recipe">
        <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Description</strong><br>
-       <input type="text" name="description">
-        <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Ingredients</strong><br>
-       <textarea name="ingredients"></textarea>
-       <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary ">Instructions</strong><br>
-       <textarea name="instructions"></textarea>
-       <br>
+       <input id="recipe-descr" type="text" name="description" class="input is-primary is-focused has-text-grey" Placeholder="Recipe Description">
+        <p class="p has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary" >Ingredients</strong><br>
+       <textarea id="recipe-ingr" name="ingredients" class="input is-primary is-focused has-text-grey" Placeholder="Add Recipe Ingredients"></textarea>
+       <p class="p pb-3 has-background-warning has-text-centered-fullhd"><strong class="strong has-text-primary" >Instructions</strong><br>
+       <textarea id="recipe-instr" name="instructions" class="input is-primary is-focused has-text-grey" Placeholder="Add Cooking Instructions"></textarea>
    </div>
    <br>
    
@@ -27,9 +26,8 @@
   </div>
 </div>
 </section>
-<br>
 
-<div>
+<div >
 {{#if recipes.length}}
 <article>
 {{#each recipes as |recipe|}}

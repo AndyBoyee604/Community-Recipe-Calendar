@@ -25,11 +25,11 @@ async function editRecipeFormHandler(event) {
     });
      
     if (response.ok) {
-      document.location.replace('/recipe');
+      document.location.replace('/recipe/');
     } else {
       alert(response.statusText);
     }
   }
   
   
-  document.querySelector('.edit-recipes-form').addEventListener('submit', editRecipeFormHandler);
+  document.querySelector('.edit-recipe-form').addEventListener('submit', editRecipeFormHandler);

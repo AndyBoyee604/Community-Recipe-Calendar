@@ -1,95 +1,64 @@
 <html lang="en">
 {{! page head start}}
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Community-Recipe-Me</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css">
-    <link rel="stylesheet" href="/public/stylesheets/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community-Recipe-Me</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css">
+  <link rel="stylesheet" href="/public/stylesheets/style.css" />
+</head>
 {{! page head end}}
 
 {{! page body start}}
-  <body>
-      <header class="has-background-warning">
-        <br>
-        <!--<img src="/public/images/Header Image.png"-->
-             <nav id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-end">
-      
-            {{!-- <a href="/">Login</a> --}}
-  
-          
-          
+<body>
+  <header class="has-background-warning">
+    <nav id="navbarBasicExample" class="navbar-menu is-active">
+      <div class="navbar-end">
+        <span>
           {{#if loggedIn}}
-           <span>
-            {{!-- <a class="button is-success has-text-white" href="/random-recipe">Get Recipe</a> --}}
-                    <a class="button is-success has-text-white" href="/">Home</a>
-            <a class="button is-success has-text-white"href="/recipe">Add Recipe</a>
-            <a class="button is-success has-text-white"href="/random-recipe">Get Recipe</a>
-             <a class="button is-success has-text-white" href="/dashboard">Dashboard</a>
-            <button id="logout" class="button is-light has-text-dark">Logout</button>
-           
-            {{!-- <button id="logout" class="button is-white has-text-primary">Logout</button> --}}
-            {{else}}
-            <div><a class="button is-primary has-text-white is-center" href="/login">Login</a></div>
-            {{/if}}
-              </span>
-            </div>
-        </nav>
-        </header>
-        
-   {{! page header ends}}
+          <a class="button is-success has-text-white" href="/">Home</a>
+          <a class="button is-success has-text-white" href="/recipe">Add Recipe</a>
+          <a class="button is-success has-text-white" href="/random-recipe">Get Recipe</a>
+          <a class="button is-success has-text-white" href="/dashboard">Dashboard</a>
+          <button id="logout" class="button is-light has-text-dark">Logout</button>
+          {{else}}
+          <div><a class="button is-primary has-text-white is-center" href="/login">Login</a></div>
+          {{/if}}
+        </span>
+      </div>
+    </nav>
+  </header>
+  {{! page header ends}}
 
   {{! page logo images}}
-   <section class="has-background-warning has-text-centered">
-      <p class="has-text-centered">
-        <div id="logo" class="align-text-center">
-          <img src="/public/images/page-name-text2.png">
-        </div>
-        <br>
-        
-      <div>
-      <img src="/public/images/logo-9.png">
-         <h1 class="subtitle is-size-6-fullhd has-text-grey has-text-centered">
-        </div>
-   </section>
-<br>
-        {{!-- {{! Add Recipe Section Start}}
-      <section class="has-text-centered">
-        <h1 class="button is-white">
-          <a class="has-text-primary" href="/dashboard">Add Recipe</a>
-        </h1>
-      </section>
-      <br> --}}
-        {{!-- <section class="has-background-warning has-text-centered">
-          {{! logout and login buttons on page
-          {{#if loggedIn}}
-            <a href="/dashboard">dashboard</a>
-            <button id="logout" class="btn-no-style">logout</button>
-          {{else}}
-          <h1 class="button is-white">
-            <a class="has-text-primary" href="/login">Sign Up/Login</a>
-          </h1>
-          {{/if}}
-        </section> --}}
-    <br>
-      <main class="has-background-white has-text-centered-fullhd">
-        {{{body}}}
-      </main>
-
-      {{! --page footer }}
-      <footer class="footer has-background-warning has-text-centered-fullhd">
-        <p class="has-text-centered-fullhd">&copy; 2022 Community Recipe Me</p>
-      </footer>
+  <section class="has-background-warning has-text-centered">
+    <p class="has-text-centered">
+    <div id="logo" class="align-text-center">
+      <img src="/public/images/page-name-text2.png">
     </div>
+    <br>
+    <div>
+      <img src="/public/images/logo-9.png">
+      <h1 class="subtitle is-size-6-fullhd has-text-grey has-text-centered">
+    </div>
+  </section>
+  <br>
+  <main class="has-background-white has-text-centered-fullhd">
+    {{{body}}}
+  </main>
 
-    {{! The below is for a logout function located under public-javascript-logoutjs}}
-    {{#if loggedIn}}
-      <script src="/public/javascript/logout.js"></script>
-    {{/if}}
-  </body>
-  {{! -- Page body end }}
+  {{! --page footer }}
+  <footer class="footer has-background-warning has-text-centered-fullhd">
+    <p class="has-text-centered-fullhd">&copy; 2022 Community Recipe Me</p>
+  </footer>
+  </div>
+
+  {{! The below is for a logout function located under public-javascript-logoutjs}}
+  {{#if loggedIn}}
+  <script src="/public/javascript/logout.js"></script>
+  {{/if}}
+</body>
+{{! -- Page body end }}
 </html>

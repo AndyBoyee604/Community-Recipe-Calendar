@@ -1,7 +1,7 @@
 # Recipe-Me
 
   ## Description
-    We created this application so that users could have a one stop shop to find and share recipes. This can be done via the dashboard where users who are logged in will be able to share external recipes. They can also navigate to the add recipe page where they can create their own unique recipes. Lastly, the get recipe page will return a wide range of meals with key information such as ingredients and cooking directions. One of the challenges we faced was getting our data to correctly display, and a couple merge conflicts. 
+    We created this application so that users could have a one stop shop to find and share recipes. This can be done via the dashboard where users who are logged in will be able to share external recipes. The get recipe page will also return a wide range of meals with key information such as ingredients and cooking directions. One of the challenges we faced was getting our data to correctly display, and a couple of merge conflicts. 
 
   [![License](https://img.shields.io/badge/License-NONE-inactive)](https://choosealicense.com/no-permission/)
 

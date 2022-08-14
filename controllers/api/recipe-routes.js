@@ -79,34 +79,6 @@ router.post('/', (req, res) => {
     });
 });
 
-// Can only edit if logged in 
-router.put('/:id', withAuth, (req, res) => {
-  Recipe.update(
-    {
-      recipe_title: req.body.recipe_title,
-      description: req.body.description,
-      ingredients: req.body.ingredients,
-      instructions: req.body.instructions,
-    },
-    {
-      where: {
-        id: req.params.id
-      }
-    }
-  )
-    .then(dbRecipeData => {
-      if (!dbRecipeData) {
-        res.status(404).json({ message: 'No Recipe found with this id' });
-        return;
-      }
-      res.json(dbRecipeData);
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
-
 // Can only delete if logged in 
 router.delete('/:id', (req, res) => {
   Recipe.destroy({
